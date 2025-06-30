@@ -1,5 +1,5 @@
 {% set name = "vizro-mcp" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/vizro_mcp-{{ version }}.tar.gz
-  sha256: 720de729011fcbe6bb8f9bdd21021b83e392b7b818ae018b3b8185350085aa4f
+  sha256: f61a6d5e4255ae4e1bcb23a712c8df43d14a829b401cddfd31bd32e3617faa4d
 
 build:
   entry_points:
