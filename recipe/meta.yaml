@@ -1,5 +1,5 @@
 {% set name = "vizro-mcp" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/vizro_mcp-{{ version }}.tar.gz
-  sha256: f61a6d5e4255ae4e1bcb23a712c8df43d14a829b401cddfd31bd32e3617faa4d
+  sha256: c083120b53aac1cea779be0f3a8412b1516e5a76b88924863ffab67b07acb261
 
 build:
   entry_points:
@@ -23,10 +23,11 @@ requirements:
     - hatchling
     - pip
   run:
+    - pydantic
     - python >={{ python_min }}
     - httpx >=0.28.1
     - mcp >=1.6.0
-    - vizro >=0.1.42
+    - vizro >=0.1.46
     - click >=8.1.7
     # Refer to https://github.com/mckinsey/vizro/blob/main/vizro-mcp/pyproject.toml#L21
     # "pandas[html,parquet,excel]"
