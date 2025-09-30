@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/conda-forge-vizro-mcp-feedstock-badge.png)](https://mseep.ai/app/conda-forge-vizro-mcp-feedstock)
+
 About vizro-mcp-feedstock
 =========================
 
