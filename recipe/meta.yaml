@@ -1,5 +1,5 @@
 {% set name = "vizro-mcp" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/vizro_mcp-{{ version }}.tar.gz
-  sha256: c083120b53aac1cea779be0f3a8412b1516e5a76b88924863ffab67b07acb261
+  sha256: b5f819c6c97cb73a7c3ec237d5bb7d5a042371d5e6a013025523834ea8d9b765
 
 build:
   entry_points:
@@ -31,7 +31,7 @@ requirements:
     - click >=8.1.7
     # Refer to https://github.com/mckinsey/vizro/blob/main/vizro-mcp/pyproject.toml#L21
     # "pandas[html,parquet,excel]"
-    - pandas
+    - pandas 
     # Refer to https://github.com/pandas-dev/pandas/blob/main/pyproject.toml#L68
     # html = ['beautifulsoup4>=4.12.3', 'html5lib>=1.1', 'lxml>=4.9.2']
     - beautifulsoup4 >=4.12.3
