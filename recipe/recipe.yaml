@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.4"
+  version: 0.1.5
 
 package:
   name: vizro-mcp
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/v/vizro-mcp/vizro_mcp-${{ version }}.tar.gz
-  sha256: b5f819c6c97cb73a7c3ec237d5bb7d5a042371d5e6a013025523834ea8d9b765
+  sha256: 87deb85086a840ed152f5c7d4dab23cca8b788c8016948de009578d756cbbcc1
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -27,29 +27,11 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pydantic
     - httpx >=0.28.1
-    - mcp >=1.6.0
-    - vizro >=0.1.46
+    - mcp >=2.0.0
+    - vizro >=1.0.0
     - click >=8.1.7
-    # Refer to https://github.com/mckinsey/vizro/blob/main/vizro-mcp/pyproject.toml#L21
-    # "pandas[html,parquet,excel]"
     - pandas
-    # Refer to https://github.com/pandas-dev/pandas/blob/main/pyproject.toml#L68
-    # html = ['beautifulsoup4>=4.12.3', 'html5lib>=1.1', 'lxml>=4.9.2']
-    - beautifulsoup4 >=4.12.3
-    - html5lib >=1.1
-    - lxml >=4.9.2
-    # excel = ['odfpy>=1.4.1', 'openpyxl>=3.1.2', 'python-calamine>=0.1.7', 'pyxlsb>=1.0.10', 'xlrd>=2.0.1', 'xlsxwriter>=3.2.0']
-    - odfpy >=1.4.1
-    - openpyxl >=3.1.2
-    - python-calamine >=0.1.7
-    - pyxlsb >=1.0.10
-    - xlrd >=2.0.1
-    - xlsxwriter >=3.2.0
-    # parquet = ['pyarrow>=10.0.1']
-    - pyarrow >=10.0.1
-
 tests:
   - python:
       imports:
@@ -57,7 +39,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - pip
